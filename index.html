@@ -12,31 +12,39 @@
     <meta property="og:image" content="https://dongchimi-0.github.io/portfolio/assets/cover.jpg">
     <meta property="og:url" content="https://dongchimi-0.github.io/portfolio/">
     <meta property="og:type" content="website">
-    <!-- ?v=2 -->
 </head>
 <body class="light-mode">
     <header>
-    <nav class="navbar">
-        <ul class="menu-links">
-        <li><a href="#about">소개</a></li>
-        <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#contact">연락처</a></li>
-        </ul>
+        <nav class="navbar">
+            <ul class="menu-links">
+                <li><a href="#about">소개</a></li>
+                <li><a href="#projects">프로젝트</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
 
-        <div class="nav-actions">
-        <input type="text" id="searchInput" placeholder="검색"  autocomplete="off"/>
-        <button id="shareBtn">🔗 공유</button>
-        <button id="darkModeBtn">🌙</button>
-    </nav>
+            <div class="nav-actions">
+                <input type="text" id="searchInput" placeholder="검색" autocomplete="off"/>
+                <button id="shareBtn">🔗 공유</button>
+
+                <!-- 다크모드 스위치 -->
+                <label class="icon-switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="icon-slider">
+                        <span class="sun">☀️</span>
+                        <span class="moon">🌙</span>
+                        <span class="lever"></span>
+                    </span>
+                </label>
+            </div>
+        </nav>
     </header>
 
     <div id="overlay"></div>
 
     <!-- 검색 결과 모달 -->
     <div id="searchModal" class="hidden">
+        <p id="searchCount"></p>
         <ul id="searchResults"></ul>
-    </div>
-
     </div>
 
 
@@ -52,17 +60,17 @@
                     작은 불편함도 그냥 넘어가지 않고 개선 아이디어를 제시하는 ‘프로불편러’<br><br>
                     <strong>개발자로 최종 목표:</strong><br>
                     구독모델로 매일 1000명 이상이 사용하는 앱을 개발하여<br>
-                    적당히 먹고 살기에에 괜찮은 노후를 마련하기
+                    적당히 먹고 살기에 괜찮은 노후를 마련하기
                 </p>
                 <p>
-                    <link rel="stylesheet" href="">이력서 다운로드
+                    <a href="resume.pdf" download>이력서 다운로드</a>
                 </p>
 
                 <!-- 연락처 -->
                 <div class="profile-links">
-                    <p><strong>email :</strong> <a href="mailto:example@example.com">yyh08059@naver.com</a></p>
-                    <p><strong>velog :</strong> <a href=" " target="_blank">        </a></p>
-                    <p><strong>linkedin :</strong> <a href=" " target="_blank">    </a></p>
+                    <p><strong>email :</strong> <a href="mailto:yyh08059@naver.com">yyh08059@naver.com</a></p>
+                    <p><strong>velog :</strong> <a href="#" target="_blank">Velog</a></p>
+                    <p><strong>linkedin :</strong> <a href="#" target="_blank">LinkedIn</a></p>
                     <p><strong>github :</strong> <a href="https://github.com/dongchimi-0" target="_blank">https://github.com/dongchimi-0</a></p>
                 </div>
             </div>
@@ -72,13 +80,19 @@
     <!-- 프로젝트 섹션 -->
     <section id="projects">
         <h2>프로젝트</h2>
-        <div class="project">
-            <h3>프로젝트Ⅰ 데이터기반 인공지능 챗봇 개발</h3>
-            <p>프로젝트 설명</p>
-        </div>
-        <div class="project">
-            <h3>프로젝트Ⅱ 빅데이터 분석 실무 프로젝트</h3>
-            <p>프로젝트 설명</p>
+        <div class="projects-container">
+            <div class="project">
+                <h3>프로젝트Ⅰ 데이터기반 인공지능 챗봇 개발</h3>
+                <p>프로젝트 설명</p>
+            </div>
+            <div class="project">
+                <h3>프로젝트Ⅱ 빅데이터 분석 실무 프로젝트</h3>
+                <p>프로젝트 설명</p>
+            </div>
+            <div class="project">
+                <h3>프로젝트Ⅲ 웹 기반 서비스 개발</h3>
+                <p>프로젝트 설명</p>
+            </div>
         </div>
     </section>
 
@@ -96,10 +110,10 @@
             <li><strong>Python</strong>
                 <ul>
                     <li>조건문, 반복문 등의 기본문법 능숙</li>
-                    <li>데이터 처리와 분석을 위한 Pandas, Numpy 라이브러리를 활용한 데이터 조작 및 분석 가능</li>
-                    <li>matplotlib, Seaborn을 이용한 데이터 시각화 기술 사용 가능</li>
-                    <li>태블로(Tableau)를 이용한 시각화 및 인사이트 공유 가능</li>
-                    <li>Scikit-learn을 사용한 LightGBM, XGBoost, Catboost와 같은 기계 학습 모델 구축 및 훈련 가능</li>
+                    <li>Pandas, Numpy를 활용한 데이터 조작 및 분석 가능</li>
+                    <li>matplotlib, Seaborn으로 데이터 시각화 가능</li>
+                    <li>Tableau를 이용한 시각화 및 인사이트 공유 가능</li>
+                    <li>Scikit-learn을 사용한 LightGBM, XGBoost, Catboost 모델 구축 가능</li>
                 </ul>
             </li>
 
@@ -111,8 +125,7 @@
 
             <li><strong>Notion</strong>
                 <ul>
-                    <li>  팀플 노션으로 해서 링크 넣기</li>
-                    <li> </li>
+                    <li>팀 프로젝트 관리 및 문서화 가능</li>
                 </ul>
             </li>
         </ul>
@@ -124,7 +137,7 @@
         <p><strong>블라디보스톡경제서비스대학교</strong> | 교환학기 수료 (2024)</p>
         <p><strong>수원대학교</strong> | 러시아어문학과 졸업 (2025)</p>
         <p><strong>논문</strong> | 국내외 언론사 취재 동향 비교 연구 (2025)</p>
-        <p><strong>IT Korea 부평 JAVA&Python기반 빅데이터 분석 활용 AI플랫폼 개발자 양성과정 </strong> | 수료 (2025)</p>
+        <p><strong>IT Korea 부평 JAVA&Python기반 빅데이터 분석 활용 AI플랫폼 개발자 양성과정</strong> | 수료 (2025)</p>
         <ul>
             <li>웹&콘텐츠서비스 개발 이수증</li>
             <li>데이터베이스 구축 이수증</li>
@@ -140,9 +153,9 @@
         <p><strong>영어</strong></p>
         <ul>
             <li>원문 자료 리딩, 스피킹 가능</li>
-            <li>TOEIC Speaking (IH) </li>
+            <li>TOEIC Speaking (IH)</li>
         </ul>
-        <p><strong>러시아아어</strong></p>
+        <p><strong>러시아어</strong></p>
         <ul>
             <li>리딩, 스피킹 가능</li>
         </ul>
@@ -152,7 +165,6 @@
         <p>&copy; 2025 윤동주. All rights reserved.</p>
     </footer>
 
-<script src="main.js"></script>
-
+    <script src="main.js"></script>
 </body>
 </html>
