@@ -6,16 +6,31 @@
     <title>나의 포트폴리오</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar">
+        <ul class="menu-links">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#contact">연락처</a></li>
+        </ul>
+
+        <div class="nav-actions">
+        <input type="text" id="searchInput" placeholder="검색"  autocomplete="off"/>
+        <button id="shareBtn">🔗 공유</button>
+        <button id="darkModeBtn">🌙</button>
+    </nav>
     </header>
+
+    <div id="overlay"></div>
+
+    <!-- 검색 결과 모달 -->
+    <div id="searchModal" class="hidden">
+        <ul id="searchResults"></ul>
+    </div>
+
+    </div>
+
 
     <!-- 소개 섹션 -->
     <section id="about">
@@ -31,8 +46,11 @@
                     구독모델로 매일 1000명 이상이 사용하는 앱을 개발하여<br>
                     적당히 먹고 살기에에 괜찮은 노후를 마련하기
                 </p>
+                <p>
+                    <link rel="stylesheet" href="">이력서 다운로드
+                </p>
 
-                <!-- 연락처 바로 표시 -->
+                <!-- 연락처 -->
                 <div class="profile-links">
                     <p><strong>email :</strong> <a href="mailto:example@example.com">yyh08059@naver.com</a></p>
                     <p><strong>velog :</strong> <a href=" " target="_blank">        </a></p>
@@ -47,7 +65,11 @@
     <section id="projects">
         <h2>프로젝트</h2>
         <div class="project">
-            <h3>프로젝트 제목</h3>
+            <h3>프로젝트Ⅰ 데이터기반 인공지능 챗봇 개발</h3>
+            <p>프로젝트 설명</p>
+        </div>
+        <div class="project">
+            <h3>프로젝트Ⅱ 빅데이터 분석 실무 프로젝트</h3>
             <p>프로젝트 설명</p>
         </div>
     </section>
@@ -93,12 +115,14 @@
         <h2>EDUCATION</h2>
         <p><strong>블라디보스톡경제서비스대학교</strong> | 교환학기 수료 (2024)</p>
         <p><strong>수원대학교</strong> | 러시아어문학과 졸업 (2025)</p>
-        <p><strong>논문</strong> 국내외 언론사 취재 동향 비교 연구 (2025)</p>
-        <p><strong>IT Korea 부평 ~~ 과정 </strong> | 수료 (2025)</p>
+        <p><strong>논문</strong> | 국내외 언론사 취재 동향 비교 연구 (2025)</p>
+        <p><strong>IT Korea 부평 JAVA&Python기반 빅데이터 분석 활용 AI플랫폼 개발자 양성과정 </strong> | 수료 (2025)</p>
         <ul>
-            <li>   </li>
-            <li    </li>
-            <li>   </li>
+            <li>웹&콘텐츠서비스 개발 이수증</li>
+            <li>데이터베이스 구축 이수증</li>
+            <li>웹 애플리케이션 개발 이수증</li>
+            <li>빅데이터 분석 및 시각화 이수증</li>
+            <li>인공지능 프로그래밍 이수증</li>
         </ul>
     </section>
 
@@ -119,5 +143,8 @@
     <footer>
         <p>&copy; 2025 윤동주. All rights reserved.</p>
     </footer>
+
+<script src="main.js"></script>
+
 </body>
 </html>
