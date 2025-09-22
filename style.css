@@ -375,16 +375,15 @@ body.dark-mode footer {
 
 /* 태그별 색상 */
 .tags .sql { background-color: #336791 !important; }
-.tags .retention { background-color: #e66b6b!important; }
-.tags .funnel { background-color: #f4a261!important; }
-.tags .bigquery { background-color: #4385f5; }
-.tags .looker { background-color: #fbbc05; color: #222 !important; }
+.tags .SB { background-color: #e66b6b!important; }
+.tags .JPA { background-color: #f4a261!important; }
+.tags .HTML { background-color: #4385f5; }
+.tags .CSS { background-color: #fbbc05; color: #222 !important; }
 .tags .python { background-color: #4B8BBE !important; }
 .tags .tableau { background-color: #e97627 !important; }
-.tags .transformer { background-color: #9c27b0 !important; }
 .tags .project { background-color: #6c5ce7 !important; }
-.tags .dacon { background-color: #0984e3 !important; }
-.tags .geocoding { background-color: #00b894 !important; }
+.tags .pandas { background-color: #00b894 !important; }
+.tags .figma { background-color: #ea98fa !important; }
 
 /* 다크모드용 카드 스타일 */
 body.dark-mode .project-card {
