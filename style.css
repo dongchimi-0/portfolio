@@ -384,6 +384,7 @@ body.dark-mode footer {
 .tags .project { background-color: #6c5ce7 !important; }
 .tags .pandas { background-color: #00b894 !important; }
 .tags .figma { background-color: #ea98fa !important; }
+.tags .notion { background-color: #ece6cc !important; }
 
 /* 다크모드용 카드 스타일 */
 body.dark-mode .project-card {
