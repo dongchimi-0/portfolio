@@ -343,7 +343,7 @@ body.dark-mode footer {
 }
 
 .project-card img {
-    width: auto;
+    width: 100%;
     height: 205px;
     object-fit: cover;
 }
