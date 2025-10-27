@@ -376,9 +376,10 @@ body.dark-mode footer {
 /* 태그별 색상 */
 .tags .sql { background-color: #336791 !important; }
 .tags .SB { background-color: #e66b6b!important; }
-.tags .JPA { background-color: #f4a261!important; }
-.tags .HTML { background-color: #4385f5; }
-.tags .CSS { background-color: #fbbc05; color: #222 !important; }
+.tags .JPA { background-color: #cab673!important; }
+.tags .HTML { background-color: #f76328!important; }
+.tags .js { background-color: #f5ae43!important; }
+.tags .CSS { background-color: #0578fb !important; color: #222 !important; }
 .tags .python { background-color: #4B8BBE !important; }
 .tags .tableau { background-color: #e97627 !important; }
 .tags .project { background-color: #6c5ce7 !important; }
