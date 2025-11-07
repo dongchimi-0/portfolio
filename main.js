@@ -118,3 +118,80 @@ searchInput.addEventListener('input', () => {
 
   renderResults(filtered, query);
 });
+
+// ---------------- 고급형 프로젝트 모달 ----------------
+const projectCards = document.querySelectorAll('.project-card');
+const projectModal = document.getElementById('projectModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const modalTags = document.getElementById('modalTags');
+const modalLinks = document.getElementById('modalLinks');
+const modalClose = projectModal.querySelector('.close');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let currentImages = [];
+let currentIndex = 0;
+
+projectCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const title = card.getAttribute('data-title');
+    const desc = card.getAttribute('data-desc');
+    const img = card.getAttribute('data-img');
+    const extra = card.getAttribute('data-extra')?.split(',') || [];
+    const tags = card.getAttribute('data-tags')?.split(',') || [];
+    const links = JSON.parse(card.getAttribute('data-links'));
+
+    // 이미지 배열 (메인 + 추가)
+    currentImages = [img, ...extra.filter(x => x.trim() !== '')];
+    currentIndex = 0;
+
+    modalImg.src = currentImages[currentIndex];
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+
+    // 태그
+    modalTags.innerHTML = '';
+    tags.forEach(t => {
+      const span = document.createElement('span');
+      span.textContent = t.trim();
+      modalTags.appendChild(span);
+    });
+
+    // 링크 버튼
+    modalLinks.innerHTML = '';
+    links.forEach(link => {
+      const a = document.createElement('a');
+      a.textContent = link.text;
+      a.href = link.url;
+      a.target = "_blank";
+      // 클래스 자동 지정
+      if (link.text.includes('Demo')) a.classList.add('demo');
+      else if (link.text.includes('GitHub')) a.classList.add('github');
+      else if (link.text.includes('Notion')) a.classList.add('notion');
+      else a.classList.add('pdf');
+      modalLinks.appendChild(a);
+    });
+
+    projectModal.classList.add('show');
+  });
+});
+
+// 슬라이드 이동
+prevBtn.addEventListener('click', () => {
+  if (!currentImages.length) return;
+  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+  modalImg.src = currentImages[currentIndex];
+});
+
+nextBtn.addEventListener('click', () => {
+  if (!currentImages.length) return;
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  modalImg.src = currentImages[currentIndex];
+});
+
+modalClose.addEventListener('click', () => projectModal.classList.remove('show'));
+projectModal.addEventListener('click', (e) => {
+  if (e.target === projectModal) projectModal.classList.remove('show');
+});
