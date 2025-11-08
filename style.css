@@ -1,12 +1,16 @@
 /* ===== 전체 기본 설정 ===== */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Pretendard', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding-top: 80px;
+    padding-top: 80px; 
     transition: background-color 0.3s, color 0.3s;
     background-color: #fefefe;
     color: #222;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 a {
@@ -565,21 +569,45 @@ body.dark-mode footer {
 }
 
 /* 태그별 색상 */
-.tags .sql { background-color: #336791 !important; }
-.tags .SB { background-color: #e66b6b!important; }
-.tags .JPA { background-color: #cab673!important; }
-.tags .HTML { background-color: #f76328!important; }
-.tags .js { background-color: #f5ae43!important; }
-.tags .CSS { background-color: #0578fb !important; color: #222 !important; }
-.tags .python { background-color: #4B8BBE !important; }
-.tags .tableau { background-color: #e97627 !important; }
-.tags .project { background-color: #6c5ce7 !important; }
-.tags .pandas { background-color: #00b894 !important; }
-.tags .figma { background-color: #ea98fa !important; }
-.tags .notion { background-color: #ece6cc !important; }
-.tags .node { background-color: #63d64c !important; }
-.tags .render { background-color: #fc9bc3 !important; }
-.tags .git { background-color: #000000 !important; color: #faf8f8 !important;}
+/* ===== 포트폴리오 태그 색상 시스템 (통일형 버전) ===== */
+
+/* 백엔드 */
+.tags .SB { background-color: #e76f51 !important; color: #fff !important; }
+.tags .JPA { background-color: #e9c46a !important; color: #222 !important; }
+.tags .java { background-color: #d46a6a !important; color: #fff !important; }
+.tags .node { background-color: #63d64c !important; color: #222 !important; }
+.tags .flask { background-color: #4a4a4a !important; color: #fff !important; }
+.tags .api { background-color: #2ecc71 !important; color: #fff !important; }
+.tags .mysql { background-color: #00758f !important; color: #fff !important; }
+
+/* 프론트엔드 */
+.tags .HTML { background-color: #f76328 !important; color: #fff !important; }
+.tags .CSS { background-color: #0578fb !important; color: #fff !important; }
+.tags .js { background-color: #f5ae43 !important; color: #222 !important; }
+.tags .typescript { background-color: #3178c6 !important; color: #fff !important; }
+.tags .react { background-color: #61dafb !important; color: #222 !important; }
+.tags .next { background-color: #000000 !important; color: #fff !important; }
+.tags .TWCSS { background-color: #38bdf8 !important; color: #222 !important; }
+
+/* 데이터 & AI */
+.tags .python { background-color: #4B8BBE !important; color: #fff !important; }
+.tags .pandas { background-color: #00b894 !important; color: #fff !important; }
+.tags .matplotlib { background-color: #11557c !important; color: #fff !important; }
+.tags .tableau { background-color: #e97627 !important; color: #fff !important; }
+.tags .ML { background-color: #ffb400 !important; color: #222 !important; }
+.tags .sql { background-color: #336791 !important; color: #fff !important; }
+
+/* 디자인 & 기획 */
+.tags .figma { background-color: #ea98fa !important; color: #222 !important; }
+.tags .notion { background-color: #ece6cc !important; color: #222 !important; }
+.tags .project { background-color: #6c5ce7 !important; color: #fff !important; }
+
+/* 배포 & 협업 */
+.tags .git { background-color: #000000 !important; color: #faf8f8 !important; }
+.tags .SourceTree { background-color: #2684ff !important; color: #fff !important; }
+.tags .render { background-color: #fc9bc3 !important; color: #222 !important; }
+.tags .aws { background-color: #ff9900 !important; color: #222 !important; }
+
 
 
 
@@ -593,3 +621,110 @@ body.dark-mode .project-card h3 {
     color: #f0f0f0;
 }
 
+/* ===== Hero Section ===== */
+#hero {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  z-index: 9999; 
+  overflow: hidden;
+  background: #dcd6f7; /* 부드러운 라벤더 기본 톤 */
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* 좌우 스크롤 제거 */
+}
+
+/* ===== 흐르는 부드러운 색감 레이어 ===== */
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, #ff9ff3 0%, transparent 40%),
+    radial-gradient(circle at 80% 40%, #feca57 0%, transparent 50%),
+    radial-gradient(circle at 50% 70%, #48dbfb 0%, transparent 40%),
+    radial-gradient(circle at 40% 80%, #1dd1a1 0%, transparent 40%);
+  filter: blur(90px);
+  opacity: 0.8;
+  animation: colorFlow 12s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+/* ===== 색상 이동 애니메이션 ===== */
+@keyframes colorFlow {
+  0%   { transform: scale(1) translate(0, 0); }
+  50%  { transform: scale(1.15) translate(15px, -10px); }
+  100% { transform: scale(1) translate(0, 0); }
+}
+
+/* ===== Hero 콘텐츠 ===== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 90%;
+}
+
+.hero-img {
+  width: clamp(100px, 20vw, 180px);
+  height: auto;
+  animation: floatImg 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatImg {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
+}
+
+/* ===== 타이핑 텍스트 ===== */
+.hero-content h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: #5e4b8b;
+  white-space: pre-line;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+/* ===== Hero 퇴장 애니메이션 ===== */
+
+.hero-exit {
+  animation: heroExit 1.5s ease forwards;
+  pointer-events: none; /* 클릭 방해 방지 */
+}
+@keyframes heroExit {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-50px); }
+}
+
+/* ===== 모바일 대응 ===== */
+@media (max-width: 480px) {
+  #hero {
+    padding: 8vh 6vw;
+  }
+
+  .hero-content {
+    gap: 1.5rem;
+  }
+
+  .hero-img {
+    width: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+}

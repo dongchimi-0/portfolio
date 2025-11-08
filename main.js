@@ -219,3 +219,41 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 }); // 20% 이상 보일 때 트리거
 
 fadeEls.forEach(el => observer.observe(el));
+
+// ===== Hero Typing + 이미지 전환 + Exit =====
+const typingText = document.getElementById("typing-text");
+const heroImg = document.getElementById("heroImg");
+const hero = document.getElementById("hero");
+
+const lines = ["안녕하세요,", "웹 개발자 윤동주입니다."];
+let line = 0, idx = 0;
+
+function typeEffect() {
+  if (line < lines.length) {
+    if (idx < lines[line].length) {
+      typingText.innerHTML += lines[line][idx];
+      idx++;
+      setTimeout(typeEffect, 120);
+    } else {
+      typingText.innerHTML += "<br>";
+      line++;
+      idx = 0;
+
+      // 두 번째 줄 시작 전 이미지 전환 (👋)
+      if (line === 1) {
+        heroImg.src = "assets/hi.png";
+      }
+
+      setTimeout(typeEffect, 400);
+    }
+  } else {
+    // Hero 퇴장 애니메이션
+    setTimeout(() => {
+      hero.classList.add("hero-exit");
+      setTimeout(() => hero.remove(), 1500);
+    }, 1000);
+  }
+}
+
+typeEffect();
+
