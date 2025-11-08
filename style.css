@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding-top: 80px;
     transition: background-color 0.3s, color 0.3s;
     background-color: #fefefe;
     color: #222;
@@ -40,12 +40,38 @@ body.dark-mode li {
 body.dark-mode a {
     color: #8db2dd;
 }
+/* ===== 스크롤 진행 바 ===== */
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #25619c, #74b9ff);
+  z-index: 2000;
+  transition: width 0.1s ease-out;
+  border-radius: 2px;
+}
+
 
 /* ===== 헤더 ===== */
 header {
-    background-color: transparent;
-    padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+  padding: 15px 0;
+  transition: all 0.4s ease;
 }
+
+body.dark-mode header {
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
 
 .navbar {
     display: flex;
@@ -367,7 +393,7 @@ body.dark-mode h2 {
 
 /* 다크모드 */
 body.dark-mode #projectModal .modal-content {
-  background: #1f1f1f;
+  background: #1f1f1f; 
   color: #eee;
 }
 

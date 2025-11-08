@@ -14,6 +14,7 @@
     <meta property="og:type" content="website">
 </head>
 <body class="light-mode">
+    <div class="scroll-bar"></div>
     <header>
         <nav class="navbar">
             <ul class="menu-links">
@@ -58,8 +59,7 @@
                     하지만 동시에 유쾌함으로 부정적인 상황을 풀어내는 성격<br>
                     작은 불편함도 그냥 넘어가지 않고 개선 아이디어를 제시하는 ‘프로불편러’<br><br>
                     <strong>개발자로 최종 목표:</strong><br>
-                    구독모델로 매일 1000명 이상이 사용하는 앱을 개발하여<br>
-                    적당히 먹고 살기에 괜찮은 노후를 마련하기
+                    구독모델로 매일 1000명 이상이 사용하는 앱을 개발하기<br>
                 </p>
 
                 <!-- 연락처 -->
@@ -73,78 +73,98 @@
 
 
      <!-- 스킬 섹션 -->
-    <section id="skills">
-        <h2>SKILLS</h2>
+    <<section id="skills">
+    <h2>SKILLS</h2>
+    <ul>
+
+        <li><strong>Backend Development</strong>
         <ul>
-            <li><strong>SQL</strong>
-                <ul>
-                    <li>SQL 기본문법, 서브쿼리, 윈도우 함수까지 자유롭게 사용 가능</li>
-                    <li>리텐션 분석, 롤링 분석, 퍼널 분석을 위한 SQL 쿼리 작성 가능</li>
-                </ul>
-            </li>
-
-            <li><strong>Python</strong>
-                <ul>
-                    <li>조건문, 반복문 등의 기본문법 능숙</li>
-                    <li>Pandas, Numpy를 활용한 데이터 조작 및 분석 가능</li>
-                    <li>matplotlib, Seaborn으로 데이터 시각화 가능</li>
-                    <li>Tableau를 이용한 시각화 및 인사이트 공유 가능</li>
-                    <li>Scikit-learn을 사용한 LightGBM, XGBoost, Catboost 모델 구축 가능'\t'</li>
-                </ul>
-            </li>
-
-            <li><strong>JAVA</strong>
-                <ul>
-                    <li>조건문, 반복문 등 기본 문법 숙련</li>
-                    <li>Spring Boot를 활용한 웹 애플리케이션 개발 가능</li>
-                    <li>Spring Data JPA를 이용한 데이터베이스 연동 및 CRUD 작업 가능</li>
-                    <li>Thymeleaf, React 등 프론트엔드와 연동한 UI 개발 가능</li>
-                </ul>
-            </li>
-
-            <li><strong>Excel, Word, PowerPoint</strong>
-                <ul>
-                    <li>문서 작성 및 편집, 디자인 가능</li>
-                </ul>
-            </li>
-
-            <li><strong>Notion</strong>
-                <ul>
-                    <li>팀 프로젝트 관리 및 문서화 가능</li>
-                </ul>
-            </li>
+            <li>Spring Boot + JPA를 이용해 <b>CRUD 게시판 및 댓글 기능</b> 직접 구현</li>
+            <li>Flask 기반 <b>감정 인식 API 서버</b> 제작 및 Render 배포 경험</li>
+            <li>MySQL DB 설계 및 <b>ERD 모델링, SQL 쿼리 최적화</b> 가능</li>
+            <li>REST API 설계, DTO 변환, 예외 처리 로직 구현 경험</li>
         </ul>
+        </li>
+
+        <li><strong>Frontend Development</strong>
+        <ul>
+            <li>HTML, CSS, JavaScript로 <b>반응형 인터페이스 및 인터랙션 UI</b> 제작</li>
+            <li>Next.js + TailwindCSS로 <b>이커머스 웹사이트 프론트 구조 설계</b></li>
+            <li>Figma로 UX/UI 프로토타입 제작 및 와이어프레임 설계 경험</li>
+            <li>DOM 조작, 모달, 검색 등 <b>직접 구현형 인터랙션 개발</b></li>
+        </ul>
+        </li>
+
+        <li><strong>Data & AI</strong>
+        <ul>
+            <li>Python(Pandas, Numpy, Matplotlib)로 <b>데이터 분석 및 시각화</b> 수행</li>
+            <li>Scikit-learn, TensorFlow 기반 <b>감정 인식 및 분류 모델 학습</b> 경험</li>
+            <li>Sakila DB 분석을 통해 <b>KPI·고객군 데이터 분석 및 리포트 작성</b></li>
+            <li>Tableau로 <b>시각화 대시보드 설계 및 인사이트 도출</b></li>
+        </ul>
+        </li>
+
+        <li><strong>Tools & Collaboration</strong>
+        <ul>
+            <li>GitHub를 통한 버전 관리, 브랜치 전략 및 협업 경험</li>
+            <li>Notion으로 <b>프로젝트 일정·기획·기술문서</b> 정리 및 공유</li>
+            <li>Canva / Figma로 발표용 디자인 및 프로토타입 제작</li>
+            <li>Render, Vercel, AWS RDS 등 클라우드 환경에서 <b>배포 경험</b></li>
+        </ul>
+        </li>
+
+    </ul>
     </section>
+
 
 
     <!-- 프로젝트 섹션 --> 
     <section id="projects">
     <h2>PROJECT</h2>
     <div class="projects-grid">
-        <div class="project-card"
+        <!-- <div class="project-card"
             data-title="보드 프로젝트"
             data-desc="Spring Boot와 JPA를 활용해 CRUD 게시판을 구현한 개인 프로젝트입니다. 로그인, 댓글, 이미지 업로드 기능 포함."
             data-img="assets/board.jpg"
+            data-extra=""
             data-tags="Spring Boot,JPA,SQL,HTML,CSS"
             data-links='[
                 {"text":"🔗 Demo","url":"https://firstnewboard.onrender.com"},
                 {"text":"💻 GitHub","url":"https://github.com/dongchimi-0/newboard"}
-            ]'>
-        <img src="assets/board.jpg" alt="보드 프로젝트">
-        <div class="card-body">
-            <h3>보드 프로젝트</h3>
-            <div class="tags">
-            <span class="sql">SQL</span>
-            <span class="SB">Spring Boot</span>
-            <span class="JPA">JPA</span>
-            <span class="HTML">HTML</span>
-            <span class="CSS">CSS</span>
+            ]'> -->
+        <div class="project-card"
+            data-title="보드 프로젝트"
+            data-desc="Spring Boot와 JPA를 활용한 CRUD 게시판입니다. 현재 점검 중입니다 ⚠️"
+            data-img="assets/board.jpg"
+            data-tags="Spring Boot,JPA,SQL,HTML,CSS"
+            data-links='[
+                {"text":"⚠️ 점검 중","url":"#"}
+            ]'
+            data-status="⚠️ 점검 중">
+            <img src="assets/board.jpg" alt="보드 프로젝트">
+            <div class="card-body">
+                <h3>보드 프로젝트</h3>
+                <div class="tags">
+                <span class="sql">SQL</span>
+                <span class="SB">Spring Boot</span>
+                <span class="JPA">JPA</span>
+                <span class="HTML">HTML</span>
+                <span class="CSS">CSS</span>
+                </div>
             </div>
-        </div>
         </div>
 
         
-        <div href="assets/wireFrame.pdf" class="project-card">
+        <div class="project-card"
+            data-title="화면설계 프로젝트"
+            data-desc="Figma를 활용해 서비스 화면 구조와 사용자 흐름을 설계했습니다."
+            data-img="assets/Wireframe.png"
+            data-extra=""
+            data-tags="Figma,UI/UX,Design"
+            data-links='[
+                {"text":"📄 PDF","url":"assets/wireFrame.pdf"}
+            ]'>
+
             <img src="assets/Wireframe.png" alt="화면설계 프로젝트">
             <div class="card-body">
                 <h3> 화면설계 프로젝트</h3>
@@ -156,7 +176,15 @@
             </div>
         </div>
 
-        <div href="assets/sql.pdf" class="project-card">
+        <div class="project-card"
+            data-title="Sakila 데이터 분석 프로젝트"
+            data-desc="MySQL의 Sakila 샘플 DB를 활용해 대여·고객 데이터를 분석했습니다. 주요 KPI와 고객군별 패턴을 SQL로 도출했습니다."
+            data-img="assets/skila.png"
+            data-extra="assets/facemuse_ui.png,assets/facemuse_chart.png,assets/facemuse_code.png"
+            data-tags="SQL,Data Analysis"
+            data-links='[
+            {"text":"📄 PDF","url":"assets/sql.pdf"}
+            ]'>
             <img src="assets/skila.png" alt="DB 프로젝트">
             <div class="card-body">
                 <h3>sakila 데이터 사업 프로젝트</h3>
@@ -167,7 +195,16 @@
             </div>
         </div>
 
-        <div href="assets/dataAnalysis.pdf" class="project-card">
+        <div class="project-card"
+            data-title="Matplotlib 데이터 시각화 프로젝트"
+            data-desc="Python의 Matplotlib과 Pandas를 활용해 영화 데이터를 시각화하고 Tableau로 추가 인사이트를 시각화했습니다."
+            data-img="assets/movieppt.png"
+            data-extra="assets/facemuse_ui.png,assets/facemuse_chart.png,assets/facemuse_code.png"
+            data-tags="Python,Pandas,Matplotlib,Tableau"
+            data-links='[
+            {"text":"📄 PDF","url":"assets/dataAnalysis.pdf"}
+            ]'>
+
             <img src="assets/movieppt.png" alt=" matplotlib 프로젝트">
             <div class="card-body">
                 <h3>matplotlib 프로젝트</h3>
@@ -181,7 +218,16 @@
             </div>
         </div>
 
-        <div href="https://plump-shock-691.notion.site/27dc5d89d9098016b234c64b12a0602f" class="project-card">
+        <div class="project-card"
+            data-title="머신러닝 이야기 프로젝트"
+            data-desc="Python 기반 머신러닝 개념을 정리하고 시각화 예시를 구성한 학습형 프로젝트입니다. Notion으로 정리하여 공유했습니다."
+            data-img="assets/ML.png"
+            data-extra="assets/facemuse_ui.png,assets/facemuse_chart.png,assets/facemuse_code.png"
+            data-tags="Python,Machine Learning,Notion"
+            data-links='[
+            {"text":"🧭 Notion","url":"https://plump-shock-691.notion.site/27dc5d89d9098016b234c64b12a0602f"}
+            ]'>
+
             <img src="assets/ML.png" alt=" 머신러닝 이야기 프로젝트" >
             <div class="card-body">
                 <h3>머신러닝 이야기 프로젝트</h3>
@@ -194,7 +240,15 @@
             </div>
         </div>
 
-        <div href="assets/chatbot.pdf" class="project-card">
+        <div class="project-card"
+            data-title="감정 기반 영화 추천 챗봇"
+            data-desc="Python과 JavaScript를 활용해 사용자 감정을 분석하고 TMDB API로 영화를 추천하는 웹 챗봇입니다."
+            data-img="assets/chatbot.png"
+            data-extra="assets/facemuse_ui.png,assets/facemuse_chart.png,assets/facemuse_code.png"
+            data-tags="Python, HTML, CSS, JavaScript, Notion, GitHub"
+            data-links='[
+            {"text":"📄 PDF","url":"assets/chatbot.pdf"}
+            ]'>
             <img src="assets/chatbot.png" alt=" 챗봇 프로젝트" >
             <div class="card-body">
                 <h3>챗봇 프로젝트</h3>
@@ -209,26 +263,19 @@
                 </div>
             </div>
         </div>
-    
-        <div href="https://facemuse.onrender.com" class="project-card">
-            <img src="assets/faceMOOD.png" alt="faceMOOD" >
-            <div class="card-body">
-                <h3>감정 인식 기반 음악·명언 추천 웹앱</h3>
-                <div class="tags">
-                    <span class="python">python</span>
-                    <span class="HTML">HTML</span>
-                    <span class="CSS">CSS</span>
-                    <span class="js">js</span>
-                    <span class="node">Node.js</span>
-                    <span class="render">Render</span>
-                    <span class="git">github</span>
-                </div>
-            </div>
-        </div>  
 
         
-        <div href="https://facemuse.onrender.com" class="project-card">
-            <img src="assets/faceMOOD.png" alt="faceMOOD" >
+        <div class="project-card"
+            data-title="이커머스 프로젝트"
+            data-desc="[진행 중] Next.js와 TailwindCSS를 이용해 반응형 쇼핑몰 웹사이트를 개발했습니다. 로그인, 검색, 상품 상세 페이지를 구현했습니다."
+            data-img=""
+            data-extra=""
+            data-tags="Next.js,TailwindCSS,Node.js,GitHub,Notion"
+            data-links='[
+            {"text":"💻 GitHub","url":"https://github.com/dongchimi-0/Ecommerce_Project"},
+            {"text":"🧭 Notion","url":""}
+            ]'>
+            <img src="" alt="eCommerce" >
             <div class="card-body">
                 <h3>이커머스</h3>
                 <div class="tags">
@@ -238,6 +285,7 @@
                     <span class="next">Next.js</span>
                     <span class="node">Node.js</span>
                     <span class="git">github</span>
+                    <span class="SourceTree">SourceTree</span>
                     <span class="notion">노션</span>
                 </div>
             </div>

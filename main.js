@@ -119,7 +119,7 @@ searchInput.addEventListener('input', () => {
   renderResults(filtered, query);
 });
 
-// ---------------- 고급형 프로젝트 모달 ----------------
+// ---------------- 프로젝트 모달 ----------------
 const projectCards = document.querySelectorAll('.project-card');
 const projectModal = document.getElementById('projectModal');
 const modalImg = document.getElementById('modalImg');
@@ -194,4 +194,14 @@ nextBtn.addEventListener('click', () => {
 modalClose.addEventListener('click', () => projectModal.classList.remove('show'));
 projectModal.addEventListener('click', (e) => {
   if (e.target === projectModal) projectModal.classList.remove('show');
+});
+
+// ===== 스크롤 진행 바 =====
+const scrollBar = document.querySelector('.scroll-bar');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  scrollBar.style.width = scrollPercent + '%';
 });
