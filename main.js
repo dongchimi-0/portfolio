@@ -205,3 +205,17 @@ window.addEventListener('scroll', () => {
   const scrollPercent = (scrollTop / docHeight) * 100;
   scrollBar.style.width = scrollPercent + '%';
 });
+
+// ===== 스크롤 등장 애니메이션 =====
+const fadeEls = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // 한 번만 실행되게
+    }
+  });
+}, { threshold: 0.2 }); // 20% 이상 보일 때 트리거
+
+fadeEls.forEach(el => observer.observe(el));
